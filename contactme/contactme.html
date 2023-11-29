@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    
+</head>
+
+
+<body>
+    <header id="header">
+        <h1><a href="#">Contact Me</a></h1>
+    </header>
+    <head>
+        <style>
+        .profile-section {
+            max-height: 50vh; /* Set the maximum height to the height of the viewport */
+            overflow-y: auto; /* Add a vertical scrollbar */
+            padding: 20px; /* Add some padding */
+            padding-left:20px;
+        }
+
+        @media (max-width: 600px) {
+    .profile-section {
+        font-size: 14px;
+    }
+}
+
+        h3 {
+        font-weight: normal;
+        }
+
+        .title {
+        padding-left: 20px; /* Adjust as needed */
+        }
+
+        footer {
+        text-align: center;
+        border-top: 1px solid darkgray;
+    /* Other styles */
+        
+        }
+
+        .footer-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 20px; /* Adjust as needed */
+}
+
+.footer-icons a {
+    padding: 0 10px; /* Adjust as needed */
+}
+
+.form-container {
+    border: 1px solid darkgrey;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 15px 20px 25px; /* top, right, bottom, left */
+    margin: 20px 20px; /* top/bottom, left/right */
+}
+
+.form-container h2 {
+    text-transform: none;
+}
+
+.form-container h3 {
+    text-transform: none;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 65%; /* Adjust as needed */
+    box-sizing: border-box;
+}
+
+.form-container label {
+    display: block;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white !important; /* White text */
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add some padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Add rounded edges */
+    line-height: 1.5; /* Center text vertically */
+    font-size: 0.75em;
+    
+}
+
+/* Change the background color on hover */
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+
+    </head>
+<div class="form-container">
+    <h2><a href="#">Reach out!</a></h2>
+    <p>If you would like to find out more about any of the services or products on offer, please complete this short form below, and I'll get back to you at the soonest!</p>
+
+    <form id="contact-form" action="https://script.google.com/macros/s/AKfycbx74MJoheWiNqMDUcWjUKXamRG2iEVOZF8XQtVC74W0ovTGHuQ3SGhZFq5T3-lfo_iC/exec" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<script>
+ document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert('Please fill out all fields.');
+            return;
+        }
+
+        var formData = new FormData(this);
+
+        fetch(this.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(function() {
+            alert('Thanks for your information, I will get back to you as soon as possible!');
+            document.getElementById('contact-form').reset();
+        })
+        .catch(function(error) {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+</body>
+
+<footer class = "footer">
+    <p>Copyright &copy; Anukool</p>
+    <div class = "footer-icons">
+        <a href="https://www.facebook.com/your-facebook-profile" class="fa fa-facebook"></a>
+        <a href="https://www.twitter.com/your-twitter-profile" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/your-instagram-profile" class="fa fa-instagram"></a>
+    </div>
+</footer>
+
+</html>

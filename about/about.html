@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8" />
+    <script>
+        // Pre-load the background image
+        var img = new Image();
+        img.src = '../images/aboutme.jpg';
+        img.onload = function() {
+            document.body.style.backgroundImage = 'url(' + img.src + ')';
+        };
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    
+</head>
+
+
+<body>
+    <header id="header">
+        <h1><a href="#">About Me</a></h1>
+    </header>
+    <head>
+        <style>
+            .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Adjust as needed */
+        }
+            body {
+            background-image: url('../images/aboutme.jpg');
+            background-size: 100% 100%; /* Stretch the background image to fill the body */
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Set the height of the body to the height of the viewport */
+        }
+
+        .profile-section {
+            max-height: 50vh; /* Set the maximum height to the height of the viewport */
+            overflow-y: auto; /* Add a vertical scrollbar */
+            padding: 20px; /* Add some padding */
+            padding-left:20px;
+        }
+
+        @media (max-width: 600px) {
+    .profile-section {
+        font-size: 14px;
+    }
+}
+
+        h3 {
+        font-weight: normal;
+        }
+
+        .title {
+        padding-left: 20px; /* Adjust as needed */
+        }
+
+        footer {
+        text-align: center;
+        border-top: 1px solid darkgray;
+    /* Other styles */
+        
+        }
+
+        .footer-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 20px; /* Adjust as needed */
+}
+
+.footer-icons a {
+    padding: 0 10px; /* Adjust as needed */
+}
+    </style>
+
+<div class="container">
+</div>
+<div class="title">
+    <h2><a href="#">About Anukool</a></h2>
+    <h3 class="unbold"><a href="#">I help Pharma and Health companies create, build and deploy market winning AI and Data Capabilities.</a></h3>
+
+</div>
+    <div class="profile-section">
+        <p>Hello, I'm Anukool. Welcome to my web home. </p>
+        <p>I am a World Wide Industry Architect for Health and Life Sciences at Microsoft, and have deployed large scale AI and Data Platforms for most reputed, strategic and complex organizations. Some of the areas I have worked on include large scale R&D, drug discovery, clinical trials, knowledge graphs, AI for cancer research, national health platforms, value based healthcare, and pandemic response platforms. These engagements have not only led to YoY data and AI growth for Microsoft, but also to the creation of new IP, product enhancement, and new platform capabilities.</p>
+        <p>A passion to solve complex societal, business issues made me fall in love with learning complex and diverse topics. I am passionate about disruptive technologies like quantum computing, sustainability. I am a Microsoft Quantum field ambassador and a lifelong learner who is committed to continuous, complex, and diverse learning. </p>
+        <p>I have lived, worked and traveled across the globe in Asia, US, UK, Australia and Europe. Before finally deciding to settle down in The Netherlands, For my professional bio, you can check out my LinkedIn.</p>
+    </div>
+</body>
+
+<footer class = "footer">
+    <p>Copyright &copy; Anukool</p>
+    <div class = "footer-icons">
+        <a href="https://www.facebook.com/your-facebook-profile" class="fa fa-facebook"></a>
+        <a href="https://www.twitter.com/your-twitter-profile" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/your-instagram-profile" class="fa fa-instagram"></a>
+    </div>
+</footer>
+
+</html>
